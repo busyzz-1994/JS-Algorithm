@@ -23,4 +23,4 @@ function quick(list) {
   min.push(first);
   return [...quick(min), ...quick(max)];
 }
-console.log(quick(list));
+// console.log(quick(list));
