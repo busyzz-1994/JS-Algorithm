@@ -25,9 +25,16 @@ class Stack {
   }
   toString() {
     let str = '';
-    for (let item of this.values) {
+    this.values.forEach((item, index) => {
+      if (index === 0) {
+        str += '底部 ';
+      }
       str += item + '-';
-    }
+      if (index === this.values.length - 1) {
+        str += item + ' 顶部 ';
+      }
+    });
+
     console.log(str);
   }
 }
