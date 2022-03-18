@@ -17,6 +17,9 @@ class Stack {
   peek() {
     return this.values[this.values.length - 1];
   }
+  size() {
+    return this.values.length;
+  }
   isEmpty() {
     return this.values.length === 0;
   }
@@ -31,7 +34,7 @@ class Stack {
       }
       str += item + '-';
       if (index === this.values.length - 1) {
-        str += item + ' 顶部 ';
+        str += ' 顶部 ';
       }
     });
 
