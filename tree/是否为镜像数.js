@@ -1,11 +1,10 @@
 /*
  * @Author: busyzz
- * @Date: 2022-03-12 21:36:15
+ * @Date: 2022-03-20 21:37:18
  * @Description:
  */
-const Linked = require('./utils/linked');
-const Stack = require('./utils/stack');
-const tree = require('./utils/tree');
+
+const tree = require('../utils/tree');
 
 function isSymmetric(root) {
   if (root === null) return true;
