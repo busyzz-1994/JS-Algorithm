@@ -1,15 +1,11 @@
 /*
  * @Author: busyzz
- * @Date: 2022-03-12 21:36:15
+ * @Date: 2022-03-21 22:29:59
  * @Description:
  */
-const Linked = require('./utils/linked');
-const Stack = require('./utils/stack');
-const tree = require('./utils/tree');
 
-// const trust = [[1, 0]];
-
-// console.log(canfinish(trust, 2));
+// 通过 getMiddle 获取中间节点 然后再使用归并排序
+const Linked = require('../utils/linked');
 
 const link = new Linked();
 
