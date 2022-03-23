@@ -1,12 +1,11 @@
 /*
  * @Author: busyzz
- * @Date: 2022-03-12 21:36:15
+ * @Date: 2022-03-23 22:00:23
  * @Description:
  */
-const Linked = require('./utils/linked');
-const Stack = require('./utils/stack');
-const tree = require('./utils/tree');
 
+// 当存在相同的值，需要将同一层的相同值 continue 掉 ， 同一层的一个数只能使用一次
+// 如何跳过相同值？ 先将数组排序，然后用一个 flag 记录上次的值，如果 flag 与当前的值相同就跳过
 const candidates = [10, 1, 2, 7, 6, 1, 5];
 
 function func(candidates, target) {
