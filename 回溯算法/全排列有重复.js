@@ -1,19 +1,18 @@
 /*
  * @Author: busyzz
- * @Date: 2022-03-12 21:36:15
+ * @Date: 2022-03-26 16:06:59
  * @Description:
  */
-const Linked = require('./utils/linked');
-const Stack = require('./utils/stack');
-const tree = require('./utils/tree');
-
-const arr = [1, 2, 3];
+// 关键在于 使用一个 used 数组存储使用过的数字
+//  if (i > 0 && arr[i] === arr[i - 1] && !used[i - 1])
+//  if (!used[i])
+const arr = [1, 1, 1];
 
 function func(arr) {
-  const len = arr.length;
   if (arr.length <= 1) {
     return arr;
   }
+  let len = arr.length;
   let result = [];
   let path = [];
   let used = [];
@@ -27,8 +26,8 @@ function func(arr) {
         continue;
       }
       if (!used[i]) {
-        path.push(arr[i]);
         used[i] = true;
+        path.push(arr[i]);
         dfs();
         used[i] = false;
         path.pop();
